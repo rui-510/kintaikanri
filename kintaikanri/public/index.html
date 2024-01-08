@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勤怠管理アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>勤怠管理アプリ</h1>
+
+        <!-- 名前入力フォーム -->
+        <form id="attendanceForm">
+            <label for="userName">名前:</label>
+            <input type="text" id="userName" required>
+
+            <label for="attendanceDate">日付:</label>
+            <input type="date" id="attendanceDate" required>
+
+            <label for="attendanceTime">時間:</label>
+            <input type="time" id="attendanceTime" required>
+
+            <label for="attendanceType">勤怠種別:</label>
+            <select id="attendanceType" required>
+                <option value="出勤">出勤</option>
+                <option value="退勤">退勤</option>
+                <option value="休憩">休憩</option>
+            </select>
+
+            <button type="submit">記録する</button>
+        </form>
+
+        <!-- 勤怠データ表示テーブル -->
+        <h2>勤怠履歴</h2>
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>氏名</th>
+                    <th>日付</th>
+                    <th>勤怠種別</th>
+                    <th>時刻</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceBody">
+                <!-- 勤怠データがここに表示されます -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
